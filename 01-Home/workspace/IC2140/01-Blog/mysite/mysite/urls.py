@@ -20,5 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('inventory.urls')),
     path('', include('blog.urls')),
+    path('iot/', include('iot.urls')),
+    
     
 ]
