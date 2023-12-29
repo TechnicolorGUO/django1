@@ -1,0 +1,22 @@
+<HTML>
+    <head>
+        <title>IC2140 Inventory</title>
+    </head>
+    <body>
+        <h1>IC2140 Inventory</h1>
+        <table>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.inventory_no}}</td>
+                <td>{{ item.loc}}</td>
+                <td>{{ item.owner}}</td>
+                <td>{{ item.desc}}</td>
+                <td>{{ item.brand}}</td>
+                <td>{{ item.price}}</td>
+                <td>{{ item.purchase_date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</HTML>

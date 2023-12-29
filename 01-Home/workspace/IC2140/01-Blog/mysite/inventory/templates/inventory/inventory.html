@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>IC2140 Inventory</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-3 p-3 mb-2 bg-success text-white">Price more than $10,000</h1>
+        <table class="table">
+            <tr>
+                <th>Inventory No.</th>
+                <th>Location</th>
+                <th>Owner</th>
+                <th>Description</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Purchase Date</th>
+            </tr>
+            {% for item in con1 %}
+            <tr>
+                <td>{{ item.inventory_no }}</td>
+                <td>{{ item.loc }}</td>
+                <td>{{ item.owner }}</td>
+                <td>{{ item.desc }}</td>
+                <td>{{ item.brand }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.purchase_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h1 class="display-3 p-3 mb-2 bg-danger text-white">Purchase date more than 5 years</h1>
+        <table class="table">
+            <tr>
+                <th>Inventory No.</th>
+                <th>Location</th>
+                <th>Owner</th>
+                <th>Description</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Purchase Date</th>
+            </tr>
+            {% for item in con2 %}
+            <tr>
+                <td>{{ item.inventory_no }}</td>
+                <td>{{ item.loc }}</td>
+                <td>{{ item.owner }}</td>
+                <td>{{ item.desc }}</td>
+                <td>{{ item.brand }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.purchase_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h1 class="display-3 p-3 mb-2 bg-info text-white">Summary of total no. of inventory in each location</h1>
+        <table class="table">
+            <tr>
+                <th>Location</th>
+                <th>Count</th>
+            </tr>
+            {% for item in con3 %}
+            <tr>
+                <td>{{ item.loc }}</td>
+                <td>{{ item.id__count }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h1 class="display-3 p-3 mb-2 bg-secondary text-white">Summary of total no. of inventory for each owner</h1>
+        <table class="table">
+            <tr>
+                <th>Owner</th>
+                <th>Count</th>
+            </tr>
+            {% for item in con4 %}
+            <tr>
+                <td>{{ item.owner }}</td>
+                <td>{{ item.id__count }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
