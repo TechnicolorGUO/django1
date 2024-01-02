@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'inventory',
     'iot',
+    'dashboard',
 ]
 
 MIDDLEWARE = [

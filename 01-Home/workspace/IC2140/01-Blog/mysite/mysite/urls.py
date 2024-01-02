@@ -21,6 +21,6 @@ urlpatterns = [
     path('', include('inventory.urls')),
     path('', include('blog.urls')),
     path('iot/', include('iot.urls')),
-    
+    path('dashboard/', include('dashboard.urls')), #Inlcude app "dashboard/urls.py"
     
 ]
